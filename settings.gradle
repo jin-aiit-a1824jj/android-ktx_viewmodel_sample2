@@ -1,0 +1,2 @@
+rootProject.name='ViewModelSampel2-KTX'
+include ':app'
