@@ -4,7 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
+<data>
+    <variable
+        name="myViewModel"
+        type="a1824jj.jp.ac.aiit.viewmodelsampel2_ktx.MainActivityViewModel" />
+</data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -23,7 +27,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.061"
+        android:text="@={myViewModel.inputText}"/>
 
     <Button
         android:id="@+id/add_button"
@@ -36,7 +41,8 @@
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_edit_text"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.056"
+        android:onClick="@{()->myViewModel.setTotal()}"/>
 
     <TextView
         android:id="@+id/result_text_view"
@@ -48,7 +54,8 @@
         app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_button"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.082"
+        android:text="@{String.valueOf(myViewModel.totalData)}"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
